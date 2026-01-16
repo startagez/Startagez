@@ -1,4 +1,6 @@
-## Hi there 👋
+## HOW TO USE 
+## git clone https://github.com/startagez/Startagez.git
+## python app.py
 
 <!--
 **startagez/Startagez** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
