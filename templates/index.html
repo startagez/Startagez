@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Stories</h1>
+<h1>Welcome to Startagez</h1>
+
 {% for story in stories %}
   <h3><a href="/story/{{ story.id }}">{{ story.title }}</a></h3>
 {% endfor %}
