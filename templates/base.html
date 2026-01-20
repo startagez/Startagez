@@ -1,9 +1,23 @@
 <!doctype html>
-<title>Flask Stories</title>
-<a href="/">Home</a>
-<a href="/story/new">New Story</a>
-<a href="/login">Login</a>
-<a href="/register">Register</a>
-<a href="/logout">Logout</a>
-<hr>
-{% block content %}{% endblock %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flask Stories</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+  <a href="/">Home</a>
+  <a href="/story/new">New Story</a>
+  <a href="/login">Login</a>
+  <a href="/register">Register</a>
+  <a href="/logout">Logout</a>
+</nav>
+
+<main>
+  {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>
