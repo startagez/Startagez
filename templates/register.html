@@ -2,12 +2,12 @@
 {% block content %}
 <h1>Register</h1>
 
-<form>
-    <p>username</p>
-    <input type = "text" />
+<form method = "POST">
+     <p>username</p>
+    <input type = "text" name="username" placeholder="Username" required/>
     <p>password</p>
-    <input type = "text" />
-    <button type="submit">Submit</button>
+    <input type = "password" name="password" placeholder="Password" required />
+    <button type="submit">Register</button>
 </form>
 
 <!-- 
