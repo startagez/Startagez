@@ -9,13 +9,25 @@
     ❤️ {{ likes }} likes
   </div>
 
+  <!-- same user can only like once-->
   <a class="like-btn" href="/story/{{ story.id }}/like">Like</a>
 </div>
 
 <div class="card">
   <h2>Comments</h2>
   {% for comment in comments %}
-    <div class="comment">{{ comment.body }}</div>
+    <div class="comment">
+        <!-- username of poster of comment-->
+        {{ comment.body }}
+        <!-- time comment was posted-->
+    </div>
   {% endfor %}
+</div>
+
+<div class="leaveComment">
+    <form method="POST">
+        <input type="text" name="comment" placeholder="Leave a comment"/>
+        <button type="submit">Post</button>
+    </form>
 </div>
 {% endblock %}

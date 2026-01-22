@@ -44,3 +44,13 @@ def like_story(story_id):
     db.session.add(like)
     db.session.commit()
     return redirect(url_for("stories.view_story", story_id=story_id))
+
+"""
+@stories_bp.route("/story/<int:story_id>/comment")
+@login_required
+def comment(story_id):
+    comment = Comment(story_id=story_id, user_id=current_user.id)
+    db.session.add(comment)
+    db.session.commit()
+    return redirect(url_for("stories.view_story", story_id=story_id))
+"""

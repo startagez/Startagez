@@ -2,6 +2,7 @@ from extensions import db, login_manager
 from flask_login import UserMixin
 from datetime import datetime
 
+#list of stories they've created and saved
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
@@ -11,6 +12,7 @@ class User(UserMixin, db.Model):
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+#add genre
 class Story(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(200))
