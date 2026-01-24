@@ -25,6 +25,7 @@ class Comment(db.Model):
     body = db.Column(db.Text)
     story_id = db.Column(db.Integer, db.ForeignKey("story.id"))
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    #created_at = db.Column(db.DateTime, default=datetime.now)
 
 class Like(db.Model):
     id = db.Column(db.Integer, primary_key=True)
